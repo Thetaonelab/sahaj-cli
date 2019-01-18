@@ -1,0 +1,19 @@
+{
+  "name": "sahaj-cli",
+  "version": "1.0.0",
+  "description": "A Node CLI to install all dependencies when starting a react project as per best practices guide.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "sahaj": "./index.js"
+  },
+  "author": "Sibaprasad Maiti",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "inquirer": "^6.2.1",
+    "shelljs": "^0.8.3"
+  }
+}
