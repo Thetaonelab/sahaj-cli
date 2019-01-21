@@ -1,15 +1,18 @@
 {
   "name": "sahaj-cli",
   "version": "1.0.0",
-  "description": "A Node CLI to install all dependencies when starting a react project as per best practices guide.",
+  "description": "Easily setup React or React Native project workspace with eslint, prettier, lint-staged and husky.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint 'src/**/*.js'",
+    "format": "prettier --single-quote --jsx-bracket-same-line --write 'src/**/*.{css,js}'"
   },
   "bin": {
     "sahaj": "./index.js"
   },
   "author": "Sibaprasad Maiti <sib@thetaonelab.com>",
+  "repository": "https://github.com/Eyezon/sahaj-cli",
   "license": "MIT",
   "dependencies": {
     "chalk": "^2.4.2",
@@ -25,5 +28,28 @@
     "check",
     "format",
     "validate"
-  ]
+  ],
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.12.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.12.4",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.0",
+    "prettier": "^1.16.0"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --single-quote --jsx-bracket-same-line --write",
+      "eslint",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
 }
