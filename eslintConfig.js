@@ -23,6 +23,11 @@ const esLintConfig = {
     'implicit-arrow-linebreak': 'off',
     'arrow-parens': 'off',
     'no-console': ['error', { allow: ['warn', 'error'] }],
+    quotes: [
+      'error',
+      'single',
+      { allowTemplateLiterals: true, avoidEscape: true }
+    ],
     'no-underscore-dangle': [
       'error',
       {
