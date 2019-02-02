@@ -83,7 +83,6 @@ const prettify = fileName => {
 // generate .eslintrc.json
 const createESLintConfig = () => {
   const fileName = '.eslintrc.json';
-  shell.touch(fileName);
   const json = JSON.stringify(esLintConfig);
   fs.writeFileSync(fileName, json, 'utf8');
   prettify(fileName);
@@ -92,7 +91,6 @@ const createESLintConfig = () => {
 // generate .prettierrc
 const createPrettierrc = () => {
   const fileName = '.prettierrc';
-  shell.touch(fileName);
   const json = JSON.stringify(prettyOptions);
   fs.writeFileSync(fileName, json, 'utf8');
   prettify(fileName);
