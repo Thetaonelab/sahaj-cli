@@ -1,6 +1,6 @@
 {
   "name": "sahaj-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Easily setup React or React Native project workspace with eslint, prettier, lint-staged and husky.",
   "main": "index.js",
   "scripts": {
