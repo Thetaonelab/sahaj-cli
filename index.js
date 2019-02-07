@@ -27,15 +27,21 @@ const checkPageJSON = () => {
   return true;
 };
 
+/**
+ * NOTE: esLint and prettier by default excludes node_modules folder.
+ * So for sourceFolder we can use current directory as the default value.
+ * It does not matter if it has node_modules folder in it.
+ */
+
 // ask questions
 const askQuestions = () => {
   const questions = [
     {
       name: 'sourceFolder',
       type: 'input',
-      default: 'src',
+      default: '.',
       message:
-        'Which folder contains all source codes? This folder should not contain node_modules folder:'
+        'Which folder contains all source codes? Press ENTER if it is CURRENT folder.'
     },
     {
       name: 'packager',

@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint 'src/**/*.js'",
-    "format": "prettier --single-quote --jsx-bracket-same-line --write 'src/**/*.{css,js}'"
+    "lint": "eslint './**/*.js'",
+    "format": "prettier --single-quote --jsx-bracket-same-line --write './**/*.{css,js}'"
   },
   "bin": {
     "sahaj": "./index.js"
@@ -34,11 +34,11 @@
     "eslint": "^5.13.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-jsx-a11y": "^6.2.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.12.4",
     "husky": "^1.3.1",
-    "lint-staged": "^8.1.2",
-    "prettier": "^1.16.3"
+    "lint-staged": "^8.1.3",
+    "prettier": "^1.16.4"
   },
   "lint-staged": {
     "*.js": [
